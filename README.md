@@ -2,7 +2,7 @@
   <img src="https://i.imgur.com/pU5A58S.png" height="40%" width="70%" alt="Microsoft Active Directory Logo"/>
 </p>
 
-<h1>Deploying On-Prem Active Directory in Azure</h1>
+<h1>Deploying On-Premises Active Directory in Azure</h1>
 This walkthrough demonstrates how to set up a traditional Active Directory environment using Azure-based virtual machines.<br />
 
 <h2>Platforms and Technologies Used</h2>
