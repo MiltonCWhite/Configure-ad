@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://i.imgur.com/pU5A58S.png" height="40%" width="70%" alt="Microsoft Active Directory Logo"/>
+  <img src="https://github.com/user-attachments/assets/addc3fad-78ae-43ae-acad-638121ab8012" height="40%" width="70%" alt="Microsoft Active Directory Logo"/>
 </p>
 
 <h1>Deploying On-Premises Active Directory in Azure</h1>
@@ -36,8 +36,8 @@ This walkthrough demonstrates how to set up a traditional Active Directory envir
   Begin by creating a virtual machine for your Domain Controller (DC-1) using Windows Server 2022:
 </p>
 <p>
-  <img src="https://i.imgur.com/gaAzjvb.png" height="75%" width="100%" alt="Resource Group"/>
-  <img src="https://i.imgur.com/hubTfey.png" height="75%" width="100%" alt="VM Windows Server"/>
+  <img src="https://github.com/user-attachments/assets/fad923f4-cff3-41ce-b86e-ca2e64fabc03" height="75%" width="100%" alt="Resource Group"/>
+  <img src="https://github.com/user-attachments/assets/26cb3845-151f-4cd1-bce7-cd7609f9ac40" height="75%" width="100%" alt="VM Windows Server"/>
 </p>
 <p>
   Then create a client machine named "Client-1" running Windows 10. Make sure both VMs share the same Resource Group and Virtual Network:
@@ -49,7 +49,7 @@ This walkthrough demonstrates how to set up a traditional Active Directory envir
   Assign a static private IP to DC-1’s network interface card:
 </p>
 <p>
-  <img src="https://i.imgur.com/KHU9kC4.png" height="75%" width="100%" alt="Static IP"/>
+  <img src="https://github.com/user-attachments/assets/43164826-c806-4780-ad19-89cd0f884917" height="75%" width="100%" alt="Static IP"/>
 </p>
 <p>
   Use Network Watcher to confirm that both machines are on the same VNet:
@@ -64,13 +64,13 @@ This walkthrough demonstrates how to set up a traditional Active Directory envir
   Connect to Client-1 via Remote Desktop and run a continuous ping to DC-1’s private IP using `ping -t`:
 </p>
 <p>
-  <img src="https://i.imgur.com/bnPM9tX.png" height="75%" width="100%" alt="Perpetual Ping"/>
+  <img src="https://github.com/user-attachments/assets/5065e363-38ed-4011-adbc-a37b2f3e991c" height="75%" width="100%" alt="Perpetual Ping"/>
 </p>
 <p>
   On DC-1, allow inbound ICMPv4 echo requests by modifying the local firewall settings:
 </p>
 <p>
-  <img src="https://i.imgur.com/ZpPyEkt.png" height="75%" width="100%" alt="Enable ICMPv4"/>
+  <img src="https://github.com/user-attachments/assets/7e17a42f-f3d1-4ab3-a8d8-2b8db652540d" height="75%" width="100%" alt="Enable ICMPv4"/>
 </p>
 <p>
   Back on Client-1, verify successful responses:
@@ -85,7 +85,7 @@ This walkthrough demonstrates how to set up a traditional Active Directory envir
   Sign in to DC-1 and install the Active Directory Domain Services role:
 </p>
 <p>
-  <img src="https://i.imgur.com/A1V9XJ5.png" height="75%" width="100%" alt="Install AD"/>
+  <img src="https://github.com/user-attachments/assets/4dc259c6-72ba-43cd-8081-2dabe5ff852f" height="75%" width="100%" alt="Install AD"/>
 </p>
 <p>
   Promote the server to Domain Controller status:
@@ -97,13 +97,13 @@ This walkthrough demonstrates how to set up a traditional Active Directory envir
   Create a new forest (e.g., myactivedirectory.com — later changed to myadproject.com):
 </p>
 <p>
-  <img src="https://i.imgur.com/DCFUVrM.png" height="75%" width="100%" alt="New Forest"/>
+  <img src="https://github.com/user-attachments/assets/614594a0-994f-4014-9b9b-88683c6b0562" height="75%" width="100%" alt="New Forest"/>
 </p>
 <p>
   Reboot and log in to DC-1 as: `myadproject.com\labuser`
 </p>
 <p>
-  <img src="https://i.imgur.com/7UakWMQ.png" height="75%" width="100%" alt="FQDN Login"/>
+  <img src="https://github.com/user-attachments/assets/957afc7b-73b3-48a0-877a-747385c6d6cb" height="75%" width="100%" alt="FQDN Login"/>
 </p>
 
 <br />
@@ -112,14 +112,14 @@ This walkthrough demonstrates how to set up a traditional Active Directory envir
   In the Active Directory Users and Computers (ADUC) console, create Organizational Units (OUs) named "_EMPLOYEES" and "_ADMINS":
 </p>
 <p>
-  <img src="https://i.imgur.com/cYmv0r7.png" height="75%" width="100%" alt="OU Creation"/>
-  <img src="https://i.imgur.com/v02CBPI.png" height="75%" width="100%" alt="OU Creation"/>
+  <img src="https://github.com/user-attachments/assets/616d01d3-899f-4904-9a6a-7c7f6c7a2fce" height="75%" width="100%" alt="OU Creation"/>
+  <img src="https://github.com/user-attachments/assets/953b8604-b50e-447e-850a-ff67b6d5a080" height="75%" width="100%" alt="OU Creation"/>
 </p>
 <p>
   Add a user named Jane Doe with the username `jane_admin`:
 </p>
 <p>
-  <img src="https://i.imgur.com/h546E6L.png" height="75%" width="100%" alt="User Creation"/>
+  <img src="https://github.com/user-attachments/assets/cd989623-652d-4b78-b6f1-60175dbb08fc" height="75%" width="100%" alt="User Creation"/>
 </p>
 <p>
   Add her to the "Domain Admins" Security group:
@@ -131,7 +131,7 @@ This walkthrough demonstrates how to set up a traditional Active Directory envir
   Disconnect from DC-1 and reconnect as `myadproject.com\jane_admin`. This will now be your primary admin login.
 </p>
 <p>
-  <img src="https://i.imgur.com/xWZ4Kol.png" height="75%" width="100%" alt="Login as Admin"/>
+  <img src="https://github.com/user-attachments/assets/1abd904f-5d28-4353-85fa-643ff52fccbd" height="75%" width="100%" alt="Login as Admin"/>
 </p>
 
 <br />
@@ -140,7 +140,7 @@ This walkthrough demonstrates how to set up a traditional Active Directory envir
   Set the DNS configuration of Client-1 to use DC-1’s private IP address:
 </p>
 <p>
-  <img src="https://i.imgur.com/1KRsjI6.png" height="75%" width="100%" alt="DNS Settings"/>
+  <img src="https://github.com/user-attachments/assets/e690daff-51cd-4fe3-986d-db0937cc4d8f" height="75%" width="100%" alt="DNS Settings"/>
 </p>
 <p>
   Restart Client-1 through the Azure Portal.
@@ -155,7 +155,7 @@ This walkthrough demonstrates how to set up a traditional Active Directory envir
   Confirm the device Client-1 appears in ADUC under the "Computers" container, then move it to a new OU named "_CLIENTS":
 </p>
 <p>
-  <img src="https://i.imgur.com/vB1n9m0.png" height="75%" width="100%" alt="Move Client"/>
+  <img src="https://github.com/user-attachments/assets/3b7b84c2-5022-41ca-a22b-a1c0fa53b6d9" height="75%" width="100%" alt="Move Client"/>
 </p>
 
 <br />
@@ -191,7 +191,7 @@ This walkthrough demonstrates how to set up a traditional Active Directory envir
   Paste in the script from this GitHub repository: https://github.com/MiltonCWhite/Configure-ad/blob/main/adscript.ps1
 </p>
 <p>
-  <img src="https://i.imgur.com/0i8uApf.png" height="75%" width="100%" alt="PowerShell Script"/>
+  <img src="https://github.com/user-attachments/assets/ab94a901-882d-4d43-a57f-56dfb99e9c16" height="75%" width="100%" alt="PowerShell Script"/>
 </p>
 <p>
   Run the script and observe new accounts being generated.
@@ -203,9 +203,9 @@ This walkthrough demonstrates how to set up a traditional Active Directory envir
   Open ADUC and view the new user entries. Try logging into Client-1 using one of the new users. Be sure to reference the password from the script.
 </p>
 <p>
-  <img src="https://i.imgur.com/ZZCfiCp.png" height="75%" width="100%" alt="Employee Accounts"/>
-  <img src="https://i.imgur.com/7gBpNzN.png" height="75%" width="100%" alt="Choose User"/>
-  <img src="https://i.imgur.com/cqsddjn.png" height="75%" width="100%" alt="Login Test"/>
+  <img src="https://github.com/user-attachments/assets/95240219-1370-454e-8c13-82ca26d393ad" height="75%" width="100%" alt="Employee Accounts"/>
+  <img src="https://github.com/user-attachments/assets/98dbd105-3500-4f57-aec6-67287efbe87c" height="75%" width="100%" alt="Choose User"/>
+  <img src="https://github.com/user-attachments/assets/c5b897e3-8efc-490e-b17e-7e3c5ac693e6" height="75%" width="100%" alt="Login Test"/>
 </p>
 
 <br />
