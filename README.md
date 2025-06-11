@@ -109,7 +109,7 @@ This walkthrough demonstrates how to set up a traditional Active Directory envir
 <br />
 <h3 align="center">Add User Accounts in Active Directory</h3>
 <p>
-  In the ADUC console, create Organizational Units (OUs) named "_EMPLOYEES" and "_ADMINS":
+  In the Active Directory Users and Computers (ADUC) console, create Organizational Units (OUs) named "_EMPLOYEES" and "_ADMINS":
 </p>
 <p>
   <img src="https://i.imgur.com/cYmv0r7.png" height="75%" width="100%" alt="OU Creation"/>
@@ -122,7 +122,7 @@ This walkthrough demonstrates how to set up a traditional Active Directory envir
   <img src="https://i.imgur.com/h546E6L.png" height="75%" width="100%" alt="User Creation"/>
 </p>
 <p>
-  Add her to the "Domain Admins" group:
+  Add her to the "Domain Admins" Security group:
 </p>
 <p>
   <img src="https://i.imgur.com/mnLwTgq.png" height="75%" width="100%" alt="Domain Admins"/>
@@ -152,7 +152,7 @@ This walkthrough demonstrates how to set up a traditional Active Directory envir
   <img src="https://i.imgur.com/50wszcP.png" height="75%" width="100%" alt="Join Domain"/>
 </p>
 <p>
-  Confirm the device appears in ADUC under the "Computers" container, then move it to a new OU named "_CLIENTS":
+  Confirm the device Client-1 appears in ADUC under the "Computers" container, then move it to a new OU named "_CLIENTS":
 </p>
 <p>
   <img src="https://i.imgur.com/vB1n9m0.png" height="75%" width="100%" alt="Move Client"/>
@@ -188,7 +188,7 @@ This walkthrough demonstrates how to set up a traditional Active Directory envir
   Open PowerShell ISE with administrative privileges.
 </p> 
 <p>
-  Paste in the script from this GitHub repository: https://github.com/Xinloiazn/configure-ad/blob/main/adscript.ps1
+  Paste in the script from this GitHub repository: https://github.com/MiltonCWhite/Configure-ad/blob/main/adscript.ps1
 </p>
 <p>
   <img src="https://i.imgur.com/0i8uApf.png" height="75%" width="100%" alt="PowerShell Script"/>
